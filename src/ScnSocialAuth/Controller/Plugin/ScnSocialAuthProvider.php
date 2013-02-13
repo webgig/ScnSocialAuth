@@ -2,6 +2,7 @@
 
 namespace ScnSocialAuth\Controller\Plugin;
 
+use ScnSocialAuth\Controller\Exception as ControllerException;
 use ScnSocialAuth\Mapper\UserProviderInterface;
 use Zend\Mvc\Controller\Plugin\AbstractPlugin;
 use Zend\ServiceManager\ServiceManagerAwareInterface;
@@ -77,6 +78,9 @@ class ScnSocialAuthProvider extends AbstractPlugin implements ServiceManagerAwar
      */
     public function getServiceManager()
     {
+        if (!$this->serviceManager instanceof ServiceManager) {
+            throw new ControllerException\RuntimeException('ScnSocialAuthProvider plugin expects an ServiceManager to be injected');
+        }
         return $this->serviceManager->getServiceLocator();
     }
 
