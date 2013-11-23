@@ -13,12 +13,18 @@
             "homepage": "http://socalnick.github.com/"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/freezedriedpop/hybridauth"
+        }
+    ],
     "require": {
         "php": ">=5.3.3",
         "zendframework/zendframework": "2.*",
         "zf-commons/zfc-base": "0.*",
         "zf-commons/zfc-user": "0.*",
-        "hybridauth/hybridauth": "dev-master"
+        "hybridauth/hybridauth": "dev-master#6314995253da0146d166c53994c1fda17f043007"
     },
     "require-dev": {
         "mockery/mockery": ">=0.7.2"
