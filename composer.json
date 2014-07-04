@@ -6,7 +6,13 @@
     "keywords": [
         "zf2"
     ],
-    "homepage": "https://github.com/SocalNick/ScnSocialAuth",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/webgig/ScnSocialAuth"
+        }
+    ],
+    "homepage": "https://github.com/webgig/ScnSocialAuth",
     "authors": [
         {
             "name": "Nicholas Calugar",
