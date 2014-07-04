@@ -25,6 +25,7 @@ class ModuleOptions extends AbstractOptions
         'vkontakte',
         'yandex',
         'instagram',
+        'live',
     );
 
     /**
@@ -260,6 +261,27 @@ class ModuleOptions extends AbstractOptions
      * @var string
      */
     protected $instagramClientSecret;
+
+    /**
+     * @var boolean
+     */
+    protected $liveEnabled = false;
+
+    /**
+     * @var string
+     */
+    protected $liveClientId;
+
+    /**
+     * @var string
+     */
+    protected $liveClientSecret;
+
+    /**
+     * @var string
+     */
+    protected $liveScope;
+
 
     /**
      * @var string
@@ -1263,9 +1285,102 @@ class ModuleOptions extends AbstractOptions
     /**
      * @return string
      */
-    public function getinstagramClientSecret()
+    public function getInstagramClientSecret()
     {
         return $this->instagramClientSecret;
+    }
+
+
+    /**
+     * set live enabled
+     *
+     * @param  boolean       $liveEnabled
+     * @return ModuleOptions
+     */
+    public function setLiveEnabled($liveEnabled)
+    {
+        $this->liveEnabled = (boolean) $liveEnabled;
+
+        return $this;
+    }
+
+    /**
+     * get live enabled
+     *
+     * @return boolean
+     */
+    public function getLiveEnabled()
+    {
+        return $this->liveEnabled;
+    }
+
+    /**
+     * set live client id
+     *
+     * @param  string        $liveClientId
+     * @return ModuleOptions
+     */
+    public function setLiveClientId($liveClientId)
+    {
+        $this->liveClientId = (string) $liveClientId;
+
+        return $this;
+    }
+
+    /**
+     * get live client id
+     *
+     * @return string
+     */
+    public function getLiveClientId()
+    {
+        return $this->liveClientId;
+    }
+
+    /**
+     * set live client secret
+     *
+     * @param  string        $liveClientSecret
+     * @return ModuleOptions
+     */
+    public function setLiveClientSecret($liveClientSecret)
+    {
+        $this->liveClientSecret = (string) $liveClientSecret;
+
+        return $this;
+    }
+
+    /**
+     * get live client secret
+     *
+     * @return string
+     */
+    public function getLiveClientSecret()
+    {
+        return $this->liveClientSecret;
+    }
+
+    /**
+     * set live scope
+     *
+     * @param  string        $liveScope
+     * @return ModuleOptions
+     */
+    public function setLiveScope($liveScope)
+    {
+        $this->liveScope = (string) $liveScope;
+
+        return $this;
+    }
+
+    /**
+     * get live scope
+     *
+     * @return string
+     */
+    public function getLiveScope()
+    {
+        return $this->liveScope;
     }
 
     /**

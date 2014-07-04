@@ -1,5 +1,5 @@
 {
-    "name": "socalnick/scn-social-auth",
+    "name": "webgig/social-auth",
     "description": "Uses the HybridAuth PHP library to Enable authentication via Google, Facebook, Twitter, Yahoo!, etc for the ZfcUser ZF2 module.",
     "type": "library",
     "license": "BSD-3-Clause",
@@ -16,10 +16,6 @@
     ],
     "require": {
         "php": ">=5.3.3",
-        "zendframework/zendframework": "2.*",
-        "zf-commons/zfc-base": "0.1.*",
-        "zf-commons/zfc-user": "1.1.*",
-        "hybridauth/hybridauth": "2.2.*"
     },
     "require-dev": {
         "mockery/mockery": "0.8.0"

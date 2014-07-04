@@ -23,6 +23,22 @@ return array(
                         'action'     => 'index',
                     ),
                 ),
+                'may_terminate' => true,
+                'child_routes' => array(
+                    'done' => array(
+                        'type' => 'Segment',
+                        'options' => array(
+                            'route' => '/done[/:provider]',
+                            'constraints' => array(
+                                'provider' => '[a-zA-Z][a-zA-Z0-9_-]+',
+                            ),
+                            'defaults' => array(
+                                'controller' => 'ScnSocialAuth-HybridAuth',
+                                'action'     => 'done',
+                            ),
+                        ),
+                    ),
+                ),    
             ),
             'scn-social-auth-user' => array(
                 'type' => 'Literal',

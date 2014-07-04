@@ -161,6 +161,17 @@ class HybridAuthFactory implements FactoryInterface
                             'path' => realpath(__DIR__ . '/../HybridAuth/Provider/Instagram.php'),
                         ),
                     ),
+                     'Live' => array(
+                        'enabled' => $options->getLiveEnabled(),
+                        'keys' => array(
+                            'id' => $options->getLiveClientId(),
+                            'secret' => $options->getLiveClientSecret(),
+                        ),
+                        'wrapper' => array(
+                            'class' => 'ScnSocialAuth\\HybridAuth\\Provider\\Live',
+                            'path' => realpath(__DIR__ . '/../HybridAuth/Provider/Live.php'),
+                        ),
+                    ),
                 ),
             )
         );
