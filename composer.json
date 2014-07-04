@@ -6,12 +6,6 @@
     "keywords": [
         "zf2"
     ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/webgig/ScnSocialAuth"
-        }
-    ],
     "homepage": "https://github.com/webgig/ScnSocialAuth",
     "authors": [
         {
