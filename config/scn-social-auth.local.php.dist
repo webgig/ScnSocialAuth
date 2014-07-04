@@ -201,6 +201,20 @@ $settings = array(
      * Please specify a Instagram Client Secret
      */
     //'instagram_client_secret' => 'your-client-secret',
+    
+    /**
+     * Windows Live Client ID
+     *
+     * Please specify a Windows Live Client ID
+     */
+    //'live_client_id' => 'your-client-id',
+
+    /**
+     * Live Client Secret
+     *
+     * Please specify a Windows Live Client Secret
+     */
+    //'live_client_secret' => 'your-client-secret',
 
     /**
      * End of ScnSocialAuth configuration
