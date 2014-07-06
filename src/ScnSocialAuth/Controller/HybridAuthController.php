@@ -26,4 +26,3 @@ class HybridAuthController extends AbstractActionController
         \Hybrid_Endpoint::process($_REQUEST);
     }
 }
-
