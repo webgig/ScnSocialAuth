@@ -30,7 +30,6 @@ class Live extends \Hybrid_Providers_Live {
 		
 		$this->api->redirect_uri = $params["redirect_uri"] ;
 
-		//\Hybrid_Auth::storage()->set( "hauth_session.live.hauth_return_to"    , $params["hauth_return_to"] );
 		\Hybrid_Auth::storage()->set( "hauth_session.live.hauth_endpoint"     , $params["redirect_uri"] ); 
 		
 		$provider_params = \Hybrid_Auth::storage()->get( "hauth_session.live.id_provider_params");
@@ -42,5 +41,4 @@ class Live extends \Hybrid_Providers_Live {
 		// redirect the user to the provider authentication url
 		\Hybrid_Auth::redirect( $this->api->authorizeUrl( $params) ); 
 	}
-
 }

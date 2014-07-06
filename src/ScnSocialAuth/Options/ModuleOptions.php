@@ -1,5 +1,4 @@
 <?php
-
 namespace ScnSocialAuth\Options;
 
 use Zend\Stdlib\AbstractOptions;
@@ -25,7 +24,7 @@ class ModuleOptions extends AbstractOptions
         'vkontakte',
         'yandex',
         'instagram',
-        'live',
+        'live'
     );
 
     /**
