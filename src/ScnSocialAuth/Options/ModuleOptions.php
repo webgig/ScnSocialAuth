@@ -281,7 +281,6 @@ class ModuleOptions extends AbstractOptions
      */
     protected $liveScope;
 
-
     /**
      * @var string
      */
