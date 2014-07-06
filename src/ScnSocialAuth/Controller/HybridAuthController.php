@@ -15,7 +15,7 @@ class HybridAuthController extends AbstractActionController
     {
         $provider =  $this->params('provider');
 
-   		 // If querystring is appended in the url by the provider
+   		// If querystring is appended in the url by the provider
         if(strrpos( $_SERVER["QUERY_STRING"], '?' ) )
             parse_str( $_SERVER["QUERY_STRING"], $_REQUEST );
 

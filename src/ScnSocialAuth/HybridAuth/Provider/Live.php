@@ -27,9 +27,9 @@ class Live extends \Hybrid_Providers_Live
         $params["scope"]         = $this->scope;
         $params["redirect_uri"]  = $HYBRID_AUTH_URL_BASE . ( strpos( $HYBRID_AUTH_URL_BASE, '?' ) ? '&' : '/' ) . "done/live";
 
-        $this->api->redirect_uri = $params["redirect_uri"] ;
+   		$this->api->redirect_uri = $params["redirect_uri"] ;
 
-        \Hybrid_Auth::storage()->set( "hauth_session.live.hauth_endpoint"     , $params["redirect_uri"] );
+        \Hybrid_Auth::storage()->set( "hauth_session.live.hauth_endpoint" , $params["redirect_uri"] );
 
         $provider_params = \Hybrid_Auth::storage()->get( "hauth_session.live.id_provider_params");
         $provider_params['login_done'] = $params["redirect_uri"];
