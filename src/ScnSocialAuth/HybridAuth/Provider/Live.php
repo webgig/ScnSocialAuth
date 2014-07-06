@@ -14,8 +14,8 @@ class Live extends \Hybrid_Providers_Live
     {
         # get hybridauth base url
         if (empty(\Hybrid_Auth::$config["base_url"])) {
-	        // the base url wasn't provide, so we must use the current
-	        // url (which makes sense actually)
+            // the base url wasn't provide, so we must use the current
+            // url (which makes sense actually)
             $url  = empty($_SERVER['HTTPS']) ? 'http' : 'https';
             $url .= '://' . $_SERVER['HTTP_HOST'];
             $url .= $_SERVER['REQUEST_URI'];
@@ -27,7 +27,7 @@ class Live extends \Hybrid_Providers_Live
         $params["scope"]         = $this->scope;
         $params["redirect_uri"]  = $HYBRID_AUTH_URL_BASE . ( strpos( $HYBRID_AUTH_URL_BASE, '?' ) ? '&' : '/' ) . "done/live";
 
-   		$this->api->redirect_uri = $params["redirect_uri"] ;
+           $this->api->redirect_uri = $params["redirect_uri"] ;
 
         \Hybrid_Auth::storage()->set( "hauth_session.live.hauth_endpoint" , $params["redirect_uri"] );
 
@@ -36,7 +36,7 @@ class Live extends \Hybrid_Providers_Live
 
         \Hybrid_Auth::storage()->set( "hauth_session.live.id_provider_params" , $provider_params );
 
-		// redirect the user to the provider authentication url
+        // redirect the user to the provider authentication url
         \Hybrid_Auth::redirect( $this->api->authorizeUrl( $params) );
     }
 }
