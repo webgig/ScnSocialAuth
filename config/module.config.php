@@ -137,7 +137,7 @@ return array(
                             'provider' => array(
                                 'type' => 'Segment',
                                 'options' => array(
-                                    'route' => '/:provider',    
+                                    'route' => '/:provider', 
                                     'constraints' => array(
                                         'provider' => '[a-zA-Z][a-zA-Z0-9_-]+',
                                     ),
