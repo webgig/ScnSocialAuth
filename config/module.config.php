@@ -38,7 +38,7 @@ return array(
                             ),
                         ),
                     ),
-                ),    
+                ),
             ),
             'scn-social-auth-user' => array(
                 'type' => 'Literal',
@@ -176,3 +176,4 @@ return array(
         ),
     ),
 );
+

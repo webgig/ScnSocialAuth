@@ -1413,3 +1413,4 @@ class ModuleOptions extends AbstractOptions
         return $this->enableSocialRegistration;
     }
 }
+
