@@ -5,9 +5,8 @@ namespace ScnSocialAuth\HybridAuth\Provider;
  * This is simply to trigger autoloading as a hack for poor design in HybridAuth.
  */
 
-class Live extends \Hybrid_Providers_Live {
-
-
+class Live extends \Hybrid_Providers_Live 
+{
 	//Override the default login behavior of the hybridauth which passes the redirect_uri as querystring  and 
 	//creates possible mismatch with the registerd redirect_url in the providers api settings 
 	// E.g. Windows Live doesnot allow querystring ?hauth.done=Live is invalid for Windows Live, therefore the redirect_uri is changed to /hauth/done/live
@@ -37,7 +36,6 @@ class Live extends \Hybrid_Providers_Live {
 		
 		\Hybrid_Auth::storage()->set( "hauth_session.live.id_provider_params" , $provider_params );
 		
-
 		// redirect the user to the provider authentication url
 		\Hybrid_Auth::redirect( $this->api->authorizeUrl( $params) ); 
 	}
