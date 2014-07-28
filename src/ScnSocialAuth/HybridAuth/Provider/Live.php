@@ -9,7 +9,7 @@ use Zend\EventManager\EventManagerAwareInterface;
  * This is simply to trigger autoloading as a hack for poor design in HybridAuth.
  */
 
-class Live extends \Hybrid_Providers_Live  implements EventManagerAwareInterface
+class Live extends \Hybrid_Providers_Live
 {
     //Override the default login behavior of the hybridauth which passes the redirect_uri as querystring  and
     //creates possible mismatch with the registerd redirect_url in the providers api settings
