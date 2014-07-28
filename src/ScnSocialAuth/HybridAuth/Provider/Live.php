@@ -28,7 +28,6 @@ class Live extends \Hybrid_Providers_Live  implements EventManagerAwareInterface
             $HYBRID_AUTH_URL_BASE = \Hybrid_Auth::$config["base_url"];
         }
 
-
         $params["scope"]         = $this->scope;
 
         $this->api->redirect_uri = $HYBRID_AUTH_URL_BASE . ( strpos( $HYBRID_AUTH_URL_BASE, '?' ) ? '&' : '/' ) . "done/live" ;
