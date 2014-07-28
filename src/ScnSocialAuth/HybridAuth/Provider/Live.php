@@ -3,7 +3,6 @@ namespace ScnSocialAuth\HybridAuth\Provider;
 
 use Zend\EventManager\EventManagerInterface;
 use Zend\EventManager\EventManager;
-use Zend\EventManager\EventManagerAwareInterface;
 
 /**
  * This is simply to trigger autoloading as a hack for poor design in HybridAuth.
