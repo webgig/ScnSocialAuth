@@ -44,4 +44,21 @@ class Live extends \Hybrid_Providers_Live
         \Hybrid_Auth::redirect( $this->api->authorizeUrl($params ) );
     }
 
+    public function setEventManager(EventManagerInterface $events)
+    {
+        $events->setIdentifiers(array(__CLASS__,get_called_class(),));
+
+        $this->events = $events;
+
+        return $this;
+    }
+
+    public function getEventManager()
+    {
+        if (null === $this->events) {
+            $this->setEventManager(new EventManager());
+        }
+
+        return $this->events;
+    }
 }
